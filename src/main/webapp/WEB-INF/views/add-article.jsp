@@ -19,10 +19,7 @@
 <%--@elvariable id="article" type="pl.coderslab.entity.Article"--%>
 <form:form modelAttribute="article" method="post">
     Title: <form:input path="title"/>
-<%--    Author <form:select itemValue="id" itemLabel="lastName" path="author"--%>
-<%--                 items="${authors}" />--%>
-
-    <form:select items="${authors}" path="author" itemValue="id"  />
+    Author <form:select items="${authors}" path="author" itemValue="id"/>
     Content: <form:input path="content"/><br><br>
     <input type="submit">
 </form:form>
