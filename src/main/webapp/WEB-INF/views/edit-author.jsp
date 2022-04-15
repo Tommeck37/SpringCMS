@@ -12,16 +12,16 @@
 
 <html>
 <head>
-    <meta charset="utf-8">
-    <title>Edit Category</title>
+  <meta charset="utf-8">
+  <title>Edit Author</title>
 </head>
 <body>
-<%--@elvariable id="category" type="pl.coderslab.entity.Category"--%>
-<form:form modelAttribute="category" method="post">
+<%--@elvariable id="author" type="pl.coderslab.entity.Author"--%>
+<form:form modelAttribute="author" method="post">
   <form:hidden path="id"/>
-    Name: <form:input path="name"/>
-    Description <form:textarea path="description"/>
-    <input type="submit">
+  First Name: <form:input path="firstName"/>
+  Last Name: <form:input path="lastName"/><br>
+  <input type="submit">
 </form:form>
 </body>
 </html>

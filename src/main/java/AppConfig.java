@@ -2,6 +2,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.convert.converter.Converter;
+import org.springframework.format.FormatterRegistry;
 import org.springframework.http.converter.StringHttpMessageConverter;
 import org.springframework.orm.jpa.JpaTransactionManager;
 import org.springframework.orm.jpa.LocalEntityManagerFactoryBean;
@@ -44,6 +45,14 @@ public class AppConfig implements WebMvcConfigurer {
     public Converter CategoryConverter(){
         return new CategoryConverter();
     }
+    @Bean
+    public Converter AuthorConverter(){
+        return new AuthorConverter();
+    }
 
+    @Override
+    public void addFormatters(FormatterRegistry registry) {
+        registry.addConverter(AuthorConverter());
+    }
 
 }

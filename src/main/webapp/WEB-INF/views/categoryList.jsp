@@ -24,6 +24,7 @@
       <td>${item.description}</td>
       <td><a href="/removeCategory/${item.id}">usuń</a></td>
       <td><a href="/editCategory/${item.id}">edytuj pozycję</a></td>
+      <td><a href="/add-category">dodaj kategorię</a></td>
     </tr>
   </c:forEach>
 </table>

@@ -14,7 +14,7 @@ public class Article {
     @Column(length = 200)
     private String title;
 
-    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @ManyToOne
     private Author author;
 
 
